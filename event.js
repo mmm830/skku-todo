@@ -1,5 +1,5 @@
 let button = document.querySelector("#add");
-//console.log(button);
+
 button.addEventListener("click", () => {
     let input = document.querySelector("#task-input");
     let task = input.value;
@@ -14,3 +14,10 @@ button.addEventListener("click", () => {
 
     input.value = "";
 } );
+
+// if user types 'enter key', press button!
+document.addEventListener("keypress", (e) => {
+    if (e.key == "Enter") {
+        button.click();
+    }
+});
